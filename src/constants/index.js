@@ -4,7 +4,6 @@ import {
   creator,
   web,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
@@ -13,12 +12,10 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  crypto_koffee,
+  metalytics,
+  idfy,
   carrent,
   jobit,
   tripguide,
@@ -42,20 +39,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full Stack Engineer",
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
+    title: "Backend Engineer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Cloud Engineer",
     icon: creator,
+  },
+  {
+    title: "Flutter Developer",
+    icon: mobile,
   },
 ];
 
@@ -112,57 +109,50 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Freelance Full Stack Developer",
+    company_name: "Crypto Koffee",
+    icon: crypto_koffee,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "September 2021 - February 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed an internal system using Node.js, Express.js, React.js and MongoDB, implementing 21 core functionality pages and full CRUD operations across the platform",
+      "Collaborated with a global remote team to deliver key projects",
+      "Built an automated system to generate SVG files from an API, supporting the company's promotional efforts",
+      "Designed and implemented a dashboard allowing authorized users to create and manage tasks",
+      "Developed a leader-board to track and display user performance",
+      "Created KPI metrics for events stored in a MongoDB database",
+      "Built a custom calendar for viewing, adding, and editing events, similar to Google Calendar"
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Backend Engineer",
+    company_name: "Metalytics",
+    icon: metalytics,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "April 2022 - January 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Technical Lead for Wallet Intel",
+      "Worked with global remote team, supporting over 30+ business clients",
+      "Engineered and deployed microservices on AWS using the Serverless framework",
+      "Scaled the system from 25K to 400K wallets (last tested threshold and me scaled to more)",
+      "Achieved significant performance improvements, reducing error rates to less than 0.0001%",
+      "Enhanced fraud detection by integrating additional indicators to score wallets more effectively",
+      "Automated the entire microservice workflow on AWS utilizing Redis, SQS, and Lambda functions",
+      "Developed automated processes for generating and scoring data, including Excel sheets with complex formulas",
+      "Conducted in-depth data analysis on NFTs and wallet intelligence, identifying fraudulent wallets and visualizing wallet relationships",
+      "Implemented web scraping solutions with Selenium to extract data from sites protected by Cloudflare",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Full Stack Engineer",
+    company_name: "IDfy",
+    icon: idfy,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "January 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      
     ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  }
 ];
 
 const testimonials = [
