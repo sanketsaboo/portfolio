@@ -53,6 +53,9 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  // Conditionally render based on screen size
+  if (isMobile) return null;
+
   return (
     <Canvas
       frameloop='demand'
