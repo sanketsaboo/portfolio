@@ -1,25 +1,15 @@
+import React from "react";
 import {
   mobile,
   backend,
   creator,
   web,
-  javascript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  docker,
   crypto_koffee,
   metalytics,
   idfy,
   carrent,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -56,57 +46,66 @@ const services = [
   },
 ];
 
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript,
-  // },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
-];
+// const technologies = [
+//   {
+//     name: "HTML 5",
+//     icon: html,
+//   },
+//   {
+//     name: "CSS 3",
+//     icon: css,
+//   },
+//   {
+//     name: "JavaScript",
+//     icon: javascript,
+//   },
+//   // {
+//   //   name: "TypeScript",
+//   //   icon: typescript,
+//   // },
+//   {
+//     name: "React JS",
+//     icon: reactjs,
+//   },
+//   {
+//     name: "Redux Toolkit",
+//     icon: redux,
+//   },
+//   {
+//     name: "Tailwind CSS",
+//     icon: tailwind,
+//   },
+//   {
+//     name: "Node JS",
+//     icon: nodejs,
+//   },
+//   {
+//     name: "MongoDB",
+//     icon: mongodb,
+//   },
+//   {
+//     name: "Three JS",
+//     icon: threejs,
+//   },
+//   {
+//     name: "git",
+//     icon: git,
+//   },
+//   {
+//     name: "docker",
+//     icon: docker,
+//   },
+// ];
 
+const technologies = {
+    "Programming Languages": ['Node.js', 'Python', 'JavaScript', 'Elixir'],
+    "Databases & Cache": ['Postgres', 'MongoDB', 'Redis', 'SQL'],
+    "DevOps": ['Docker', 'GitLab', 'Git' ,'CI/CD', 'Kubernetes'],
+    "Cloud": ['Google Cloud Platform (GCP)', 'Amazon Web Services(AWS)'],
+    "Tools & Frameworks": ['RabbitMQ', 'Express.js', 'Flask', 'Remix', 'Phoenix', 'FastAPI', 'Data Visualization', 'Automation'],
+    "Frontend & Styling": ['React','Svelte' ,'HTML', 'CSS', 'Redux', 'TailwindCSS', 'Bootstrap'],
+    "Mobile Development": ['Flutter']
+  }
 const experiences = [
   {
     title: "Freelance Full Stack Developer",
