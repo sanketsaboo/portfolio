@@ -42,7 +42,7 @@ const Tech = () => {
         </p>
       </motion.div>
 
-      <div className='mt-20 flex flex-wrap gap-10 h-screen items-center justify-center'>
+      <div className='mt-20 flex flex-wrap gap-10 min-h-screen items-center justify-center'>
       {Object.entries(technologies).map(([category, techList], index) => (
           <TechCard title={category} list = {techList} index= {index}/>
         ))
