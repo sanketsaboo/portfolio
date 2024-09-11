@@ -1,7 +1,7 @@
 **Installation**
 Install the project dependencies using npm:
 ```bash
-npm install --legacy-peer-deps
+npm install 
 ```
 **Set Up Environment Variables**
 
@@ -12,7 +12,6 @@ VITE_APP_CONTACT_API=chaturl
 ```
 
 **Running the Project**
-
 ```bash
 npm run dev
 ```
