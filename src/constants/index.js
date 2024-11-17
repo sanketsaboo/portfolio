@@ -66,7 +66,7 @@ const experiences = [
     [
       "Collaborated with cross-functional teams to build products such as Sitescan, Inspect AI, DSCI <> IDfy, and Consent Governance Platform.",
       "Contributed to the development of solutions like polygonID, hospital DB, e-sign, and interview-safe tools.",
-      "Independently built an end-to-end system to automate web scraping and due diligence for high-profile clients like Razorpay, SBI, HDFC, and PayMongo.",
+      "Independently built an end-to-end system/product to automate web scraping and due diligence which were integrated by companies like Razorpay (for merchant onboarding process and due diligence), SBI, HDFC, PayMongo and others (for due diligence)",
       "Contributed 1.25% of company revenue by developing a tool that streamlined merchant onboarding and compliance checks regulated by RBI.",
       "Automated data collection for website liveness, SSL details, domain information, social media links, Google reviews, and critical legal pages such as terms, privacy, shipping, FAQs, contact, about, and returns policies.",
       "Implemented advanced text analysis to identify redundant content and restricted words, ensuring compliance across all scraped data.",
