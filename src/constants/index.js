@@ -66,7 +66,6 @@ const experiences = [
     [
       "Collaborated with cross-functional teams to build products such as Sitescan, Inspect AI, DSCI <> IDfy, and Consent Governance Platform.",
       "Contributed to the development of solutions like polygonID, hospital DB, e-sign, and interview-safe tools.",
-      "All the projects with role based access management and CI CD for all the projects.",
       "Independently built an end-to-end system to automate web scraping and due diligence for high-profile clients like Razorpay, SBI, HDFC, and PayMongo.",
       "Contributed 1.25% of company revenue by developing a tool that streamlined merchant onboarding and compliance checks regulated by RBI.",
       "Automated data collection for website liveness, SSL details, domain information, social media links, Google reviews, and critical legal pages such as terms, privacy, shipping, FAQs, contact, about, and returns policies.",
@@ -78,6 +77,7 @@ const experiences = [
       "Managed full-stack development and GCP infrastructure, leveraging GKE, Cloud Functions, and Cloud SQL to ensure high scalability and performance.",
       "Developed the backend for Inspect AI, facilitating communication between five different microservices for seamless integration.",
       "Integrated frontend with backend and contributed to parts of the ML services.",
+      "Role based access management and CI CD for all the projects.",
       "Currently working on developing a Cookie Manager to enhance user data management and privacy as part of the Consent Governance Platform of IDfy"
     ]
   },
