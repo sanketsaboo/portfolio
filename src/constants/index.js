@@ -148,9 +148,24 @@ const experiences = [
     icon: idfy,
     iconBg: "#383E56",
     date: "January 2023 - Present",
-    points: [
-      
-    ],
+    points: 
+    [
+      "Collaborated with cross-functional teams to build products such as Sitescan, Inspect AI, DSCI <> IDfy, and Consent Governance Platform.",
+      "Contributed to the development of solutions like polygonID, hospital DB, e-signature, and interview-safe tools.",
+      "All the projects with role based access management.",
+      "Independently built an end-to-end system to automate web scraping and due diligence for high-profile clients like Razorpay, SBI, HDFC, and PayMongo.",
+      "Contributed 1.25% of company revenue by developing a tool that streamlined merchant onboarding and compliance checks.",
+      "Automated data collection for website liveness, SSL details, domain information, social media links, Google reviews, and critical legal pages such as terms, privacy, shipping, FAQs, contact, about, and returns policies.",
+      "Implemented advanced text analysis to identify redundant content and restricted words, ensuring compliance across all scraped data.",
+      "Developed search functionalities for legal policies and integrated screenshots to enhance due diligence efficiency.",
+      "Engineered scoring models for page-level risk, overall website risk, and merchant classification codes (MCC).",
+      "Processed more than 1.2 million websites (in around 1 years), with the capability of running around 72k websites in bulk jobs at once (last tested).",
+      "Built a modular, event-driven microservices architecture that included scraper, bulk job, main app, and report generation services for optimal performance.",
+      "Managed full-stack development and GCP infrastructure, leveraging GKE, Cloud Functions, and Cloud SQL to ensure high scalability and performance.",
+      "Developed the backend for Inspect AI, facilitating communication between five different microservices for seamless integration.",
+      "Integrated frontend with backend and contributed to parts of the ML services.",
+      "Currently working on developing a Cookie Manager to enhance user data management and privacy as part of the Consent Governance Platform of IDfy"
+    ]
   }
 ];
 
