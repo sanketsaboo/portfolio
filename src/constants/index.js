@@ -46,57 +46,6 @@ const services = [
   },
 ];
 
-// const technologies = [
-//   {
-//     name: "HTML 5",
-//     icon: html,
-//   },
-//   {
-//     name: "CSS 3",
-//     icon: css,
-//   },
-//   {
-//     name: "JavaScript",
-//     icon: javascript,
-//   },
-//   // {
-//   //   name: "TypeScript",
-//   //   icon: typescript,
-//   // },
-//   {
-//     name: "React JS",
-//     icon: reactjs,
-//   },
-//   {
-//     name: "Redux Toolkit",
-//     icon: redux,
-//   },
-//   {
-//     name: "Tailwind CSS",
-//     icon: tailwind,
-//   },
-//   {
-//     name: "Node JS",
-//     icon: nodejs,
-//   },
-//   {
-//     name: "MongoDB",
-//     icon: mongodb,
-//   },
-//   {
-//     name: "Three JS",
-//     icon: threejs,
-//   },
-//   {
-//     name: "git",
-//     icon: git,
-//   },
-//   {
-//     name: "docker",
-//     icon: docker,
-//   },
-// ];
-
 const technologies = {
     "Programming Languages": ['Node.js', 'Python', 'JavaScript', 'Elixir'],
     "Databases & Cache": ['Postgres', 'MongoDB', 'Redis', 'SQL'],
@@ -116,10 +65,10 @@ const experiences = [
     points: 
     [
       "Collaborated with cross-functional teams to build products such as Sitescan, Inspect AI, DSCI <> IDfy, and Consent Governance Platform.",
-      "Contributed to the development of solutions like polygonID, hospital DB, e-signature, and interview-safe tools.",
+      "Contributed to the development of solutions like polygonID, hospital DB, e-sign, and interview-safe tools.",
       "All the projects with role based access management and CI CD for all the projects.",
       "Independently built an end-to-end system to automate web scraping and due diligence for high-profile clients like Razorpay, SBI, HDFC, and PayMongo.",
-      "Contributed 1.25% of company revenue by developing a tool that streamlined merchant onboarding and compliance checks.",
+      "Contributed 1.25% of company revenue by developing a tool that streamlined merchant onboarding and compliance checks regulated by RBI.",
       "Automated data collection for website liveness, SSL details, domain information, social media links, Google reviews, and critical legal pages such as terms, privacy, shipping, FAQs, contact, about, and returns policies.",
       "Implemented advanced text analysis to identify redundant content and restricted words, ensuring compliance across all scraped data.",
       "Developed search functionalities for legal policies and integrated screenshots to enhance due diligence efficiency.",
