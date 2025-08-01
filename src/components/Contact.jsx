@@ -74,7 +74,7 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
-         <a href="https://cookie-manager.sanketsaboo.com/">Cookie Manager Link</>
+         <a href="https://cookie-manager.sanketsaboo.com/">Cookie Manager Link</a>
 
         <form
           ref={formRef}
