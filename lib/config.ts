@@ -77,7 +77,7 @@ export const EXPERIENCE = [
     current: false,
     highlights: [
       'Engineered and deployed microservices on AWS using the Serverless framework, supporting 30+ global business clients.',
-      'Scaled the system from 25K to 400K+ wallets — automated the entire microservice workflow using Redis, SQS, and Lambda.',
+      'Scaled the system from 25K to 400K+ wallets - automated the entire microservice workflow using Redis, SQS, and Lambda.',
       'Enhanced fraud detection by integrating additional indicators, reducing error rates to under 0.0001%.',
       'Built automated pipelines for generating, scoring, and analyzing NFT and wallet intelligence data.',
       'Conducted in-depth blockchain data analysis to identify fraudulent wallets and visualize wallet relationships.',

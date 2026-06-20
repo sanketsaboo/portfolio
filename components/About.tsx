@@ -34,7 +34,7 @@ export default function About() {
           display: 'grid', placeItems: 'center', overflow: 'hidden',
         }}>
           <span style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 12, color: 'var(--text-3)', letterSpacing: '0.05em' }}>
-            [ portrait - drop a photo ]
+            [ portrait]
           </span>
         </div>
 

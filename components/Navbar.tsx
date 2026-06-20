@@ -6,11 +6,11 @@ import { Sun, Moon } from '@phosphor-icons/react'
 import Magnetic from '@/components/Magnetic'
 
 const NAV_LINKS = [
-  { label: 'about',      href: '#about'      },
-  { label: 'experience', href: '#experience' },
-  { label: 'skills',     href: '#skills'     },
-  { label: 'writing',    href: '#writing'    },
-  { label: 'contact',    href: '#contact'    },
+  { label: 'About',      href: '#about'      },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Skills',     href: '#skills'     },
+  { label: 'Writing',    href: '#writing'    },
+  { label: 'Contact',    href: '#contact'    },
 ]
 
 export default function Navbar() {
