@@ -97,32 +97,32 @@
   --grid-line: oklch(0 0 0 / 0.04);
 }
 
-/* Darken accent in light mode for readable contrast on white */
+/* Accent in light mode — slightly muted for white bg contrast */
 :root[data-theme="light"],
 :root[data-theme="light"][data-accent="cyan"] {
-  --accent:        oklch(0.50 0.16 195);
-  --accent-soft:   oklch(0.50 0.16 195 / 0.10);
-  --accent-border: oklch(0.50 0.16 195 / 0.30);
+  --accent:        oklch(0.68 0.16 195);
+  --accent-soft:   oklch(0.68 0.16 195 / 0.12);
+  --accent-border: oklch(0.68 0.16 195 / 0.35);
 }
 :root[data-theme="light"][data-accent="lime"] {
-  --accent:        oklch(0.52 0.18 128);
-  --accent-soft:   oklch(0.52 0.18 128 / 0.10);
-  --accent-border: oklch(0.52 0.18 128 / 0.30);
+  --accent:        oklch(0.70 0.18 128);
+  --accent-soft:   oklch(0.70 0.18 128 / 0.12);
+  --accent-border: oklch(0.70 0.18 128 / 0.35);
 }
 :root[data-theme="light"][data-accent="violet"] {
-  --accent:        oklch(0.50 0.18 292);
-  --accent-soft:   oklch(0.50 0.18 292 / 0.10);
-  --accent-border: oklch(0.50 0.18 292 / 0.30);
+  --accent:        oklch(0.68 0.18 292);
+  --accent-soft:   oklch(0.68 0.18 292 / 0.12);
+  --accent-border: oklch(0.68 0.18 292 / 0.35);
 }
 :root[data-theme="light"][data-accent="orange"] {
-  --accent:        oklch(0.55 0.17 58);
-  --accent-soft:   oklch(0.55 0.17 58 / 0.10);
-  --accent-border: oklch(0.55 0.17 58 / 0.30);
+  --accent:        oklch(0.72 0.17 58);
+  --accent-soft:   oklch(0.72 0.17 58 / 0.12);
+  --accent-border: oklch(0.72 0.17 58 / 0.35);
 }
 :root[data-theme="light"][data-accent="coral"] {
-  --accent:        oklch(0.52 0.18 24);
-  --accent-soft:   oklch(0.52 0.18 24 / 0.10);
-  --accent-border: oklch(0.52 0.18 24 / 0.30);
+  --accent:        oklch(0.70 0.18 24);
+  --accent-soft:   oklch(0.70 0.18 24 / 0.12);
+  --accent-border: oklch(0.70 0.18 24 / 0.35);
 }
 
 /* ─── Heading font themes ────────────────────────────────────── */
@@ -312,14 +312,14 @@ body::after {
   position: fixed;
   top: 0;
   left: 0;
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--accent);
   pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: difference;
   will-change: transform;
+  transition: opacity 0.2s;
 }
 
 .cursor-ring {
@@ -329,21 +329,22 @@ body::after {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  border: 1.5px solid #fff;
+  border: 1.5px solid var(--accent);
+  opacity: 0.55;
   pointer-events: none;
   z-index: 9998;
-  mix-blend-mode: difference;
   will-change: transform;
   transition:
     width 0.28s var(--ease),
     height 0.28s var(--ease),
-    background 0.28s var(--ease),
-    opacity 0.28s;
+    opacity 0.28s var(--ease),
+    border-width 0.28s var(--ease);
 }
 .cursor-ring.is-hovering {
-  width: 56px;
-  height: 56px;
-  background: #fff;
+  width: 48px;
+  height: 48px;
+  opacity: 0.85;
+  border-width: 2px;
 }
 
 /* ─── Pulse dot (availability pill) ─────────────────────────── */
@@ -373,6 +374,13 @@ body::after {
   border-radius: 50%;
   background: oklch(0.78 0.17 150 / 0.45);
   animation: pulseRing 2s infinite;
+}
+
+/* ─── Ghost button (Resume) hover ───────────────────────────── */
+.btn-ghost:hover {
+  background: var(--accent-soft) !important;
+  border-color: var(--accent-border) !important;
+  color: var(--accent) !important;
 }
 
 /* ─── Navbar nav-link underline hover ────────────────────────── */
@@ -459,7 +467,7 @@ body::after {
   color: var(--accent) !important;
   transform: translate(2px, -2px);
 }
-@media (max-width: 720px) {
+@media (max-width: 800px) {
   .products-grid {
     grid-template-columns: 1fr !important;
   }
@@ -504,7 +512,7 @@ body::after {
 }
 
 /* ─── Experience ─────────────────────────────────────────────── */
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .xp-row {
     grid-template-columns: 1fr !important;
     gap: 14px !important;

@@ -10,7 +10,7 @@ export const PERSONAL = {
   tagline: 'Turning ideas into products that scale and ship. I build for real users, real constraints, and lasting impact.',
   email: 'sanket.saboo@somaiya.edu',
   availability: 'Open to good opportunities',
-  resumeUrl: '/resume.pdf',
+  resumeUrl: 'https://drive.google.com/file/d/14fSLxgzr0AJXrV8cpLm1I6MlFCyuAK_6/view?usp=sharing',
   bio: [
     'Full-stack engineer passionate about building efficient, scalable, and user-friendly solutions to real-world problems. I love the craft - from distributed backend systems to polished product interfaces - and I pick up new technologies fast.',
     'I thrive in high-paced environments, love taking full ownership of what I build, and genuinely enjoy turning ideas into reality. If you\'re building something interesting, I\'d love to be part of it.',
@@ -37,7 +37,7 @@ export const EXPERIENCE = [
     highlights: [
       'Developing an AI Tracing and Observability platform enabling end-to-end tracing, monitoring, and debugging for LLM applications.',
       'Building across multiple LLM providers and SDK integrations for enterprise-grade observability.',
-      'Rearchitected and implemented the ingestion pipeline independently - making it ~2x faster and ~50% cheaper, processing 5.76M+ events per day on average (~4K rpm) and growing.',
+      'Rearchitected and implemented the ingestion pipeline - making it ~2x faster and ~50% cheaper, processing 5.76M+ events per day on average (~4K rpm) and growing.',
       'Working on AI Evals - enabling teams to measure and benchmark LLM application quality at scale.',
     ],
     tech: ['Node.js', 'TypeScript', 'Python', 'Go', 'Java', 'Next.js', 'Redis', 'BullMQ', 'OpenTelemetry', 'SDK', 'Generative AI', 'LLM', 'Agentic AI', 'AWS', 'GitHub', 'Git'],
@@ -52,7 +52,8 @@ export const EXPERIENCE = [
     highlights: [
       'Built and scaled SiteScan end-to-end - automated compliance checks and merchant due diligence for RBI-regulated onboarding, contributing 1.25% of revenue.',
       'Scaled to 4.9M+ website scans with P90 scan time of 48s and 70k+ domains per bulk job, powered by AI-driven MCC prediction at 72–85% accuracy.',
-      'Architected and built the Consent Governance and Cookie Management platform end-to-end - enabling enterprises to govern user consent flows and comply with GDPR and India\'s DPDP Act.',
+      'Architected and built the Cookie Management platform end-to-end - auto-scanning, categorising, and managing cookie banners for GDPR and India\'s DPDP Act compliance.',
+      'Founding engineer on the Consent Governance platform - built granular consent collection, withdrawal flows, and immutable audit trails enabling enterprise-grade regulatory compliance.',
       'Reduced daily bandwidth by ~77% through size optimization and caching for 1.5M daily hits, cutting infrastructure costs by over 75% - saving ~$25K/year per client.',
       'Delivered event-driven infrastructure using modular microservices on GCP for secure, scalable data handling.',
       'Built the entire backend and parts of the AI layer for Inspect AI - a privacy compliance co-pilot enabling dark pattern detection, journey intelligence, and real-time consent alignment across web and mobile.',
@@ -157,7 +158,7 @@ export const PRODUCTS = [
 // ─── Skills ───────────────────────────────────────────────────────────────────
 
 export const SKILLS: Record<string, string[]> = {
-  Languages: ['Node.js', 'Python', 'JavaScript', 'TypeScript', 'Elixir', 'Go', 'Java'],
+  Languages: ['Node.js', 'Python', 'JavaScript', 'TypeScript', 'Elixir', 'Go'],
   'Frameworks & Tools': ['Express.js', 'React', 'Next.js', 'Remix', 'FastAPI', 'Flask', 'Phoenix', 'RabbitMQ', 'BullMQ', 'OpenTelemetry', 'Flutter', 'Generative AI', 'LLMs', 'Agentic AI'],
   Databases: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'ClickHouse'],
   'Cloud & DevOps': ['GCP', 'AWS', 'Docker', 'Kubernetes', 'Argo', 'Kustomize', 'CI/CD', 'Git', 'GitHub', 'GitLab'],

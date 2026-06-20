@@ -42,128 +42,150 @@ export default function Hero() {
         maxWidth: 'var(--maxw)', margin: '0 auto',
         padding: 'clamp(120px, 18vw, 160px) var(--gut) clamp(80px, 10vw, 120px)',
         width: '100%',
-      }}>
+        display: 'grid',
+        gridTemplateColumns: '1fr auto',
+        gap: 'clamp(40px, 6vw, 80px)',
+        alignItems: 'center',
+      }} className="hero-inner">
 
-        {/* Availability pill */}
-        <div style={{ marginBottom: 32, animation: 'fadeUp 0.8s var(--ease) 0.05s both' }}>
-          <span style={{
-            display: 'inline-flex', alignItems: 'center', gap: 9,
-            fontFamily: 'var(--font-mono-stack)', fontSize: 12.5,
-            color: 'var(--text-2)',
-            border: '1px solid var(--line)', borderRadius: 100, padding: '7px 14px',
-            background: 'color-mix(in oklab, var(--surface) 60%, transparent)',
-          }}>
-            <span className="pulse-dot" aria-hidden="true" />
-            {PERSONAL.availability}
-          </span>
-        </div>
-
-        {/* Name - text-clip-rise animation */}
-        <h1 style={{
-          fontFamily: 'var(--font-heading)',
-          fontSize: 'clamp(52px, 11.5vw, 136px)',
-          fontWeight: 700,
-          lineHeight: 0.9,
-          letterSpacing: '-0.045em',
-          marginBottom: 'clamp(28px, 4vw, 48px)',
-        }}>
-          <span className="hero-line">
-            <span style={{ color: 'var(--text)' }}>Sanket</span>
-          </span>
-          <span className="hero-line">
-            <span style={{ color: 'var(--text)' }}>
-              Saboo<span style={{ color: 'var(--accent)' }}>.</span>
+        {/* Left column */}
+        <div>
+          {/* Availability pill */}
+          <div style={{ marginBottom: 32, animation: 'fadeUp 0.8s var(--ease) 0.05s both' }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: 9,
+              fontFamily: 'var(--font-mono-stack)', fontSize: 12.5,
+              color: 'var(--text-2)',
+              border: '1px solid var(--line)', borderRadius: 100, padding: '7px 14px',
+              background: 'color-mix(in oklab, var(--surface) 60%, transparent)',
+            }}>
+              <span className="pulse-dot" aria-hidden="true" />
+              {PERSONAL.availability}
             </span>
-          </span>
-        </h1>
+          </div>
 
-        {/* Tagline */}
-        <p style={{
-          fontFamily: 'var(--font-heading)',
-          fontWeight: 300,
-          fontSize: 'clamp(19px, 2.4vw, 26px)',
-          color: 'var(--text-2)',
-          lineHeight: 1.4,
-          maxWidth: '32ch',
-          marginBottom: 'clamp(28px, 4vw, 48px)',
-          animation: 'fadeUp 0.9s var(--ease) 0.22s both',
-        }}>
-          {PERSONAL.tagline}
-        </p>
+          {/* Name */}
+          <h1 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: 'clamp(52px, 11.5vw, 136px)',
+            fontWeight: 700,
+            lineHeight: 0.9,
+            letterSpacing: '-0.045em',
+            marginBottom: 'clamp(28px, 4vw, 48px)',
+          }}>
+            <span className="hero-line">
+              <span style={{ color: 'var(--text)' }}>Sanket</span>
+            </span>
+            <span className="hero-line">
+              <span style={{ color: 'var(--text)' }}>
+                Saboo<span style={{ color: 'var(--accent)' }}>.</span>
+              </span>
+            </span>
+          </h1>
 
-        {/* CTAs */}
-        <div style={{
-          display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center',
-          marginBottom: 'clamp(48px, 8vw, 80px)',
-          animation: 'fadeUp 0.9s var(--ease) 0.36s both',
-        }}>
-          <Magnetic>
-            <a
-              href="#contact"
-              style={{
-                fontFamily: 'var(--font-mono-stack)', fontSize: 13.5, fontWeight: 600,
-                padding: '13px 22px', borderRadius: 12,
-                background: 'var(--accent)', color: 'var(--accent-contrast)',
-                border: '1px solid var(--accent)',
-                display: 'inline-flex', alignItems: 'center', gap: 8,
-                transition: 'opacity 0.2s',
-              }}
-            >
-              Let's talk →
-            </a>
-          </Magnetic>
-          <Magnetic>
-            <a
-              href={PERSONAL.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                fontFamily: 'var(--font-mono-stack)', fontSize: 13.5,
-                padding: '13px 22px', borderRadius: 12,
-                border: '1px solid var(--line-2)',
-                color: 'var(--text)',
-                display: 'inline-flex', alignItems: 'center', gap: 8,
-                transition: 'background 0.25s, border-color 0.25s, color 0.25s',
-              }}
-              className="btn-ghost"
-            >
-              Résumé ↗
-            </a>
-          </Magnetic>
+          {/* Tagline */}
+          <p style={{
+            fontFamily: 'var(--font-heading)',
+            fontWeight: 300,
+            fontSize: 'clamp(19px, 2.4vw, 26px)',
+            color: 'var(--text-2)',
+            lineHeight: 1.4,
+            maxWidth: '32ch',
+            marginBottom: 'clamp(28px, 4vw, 48px)',
+            animation: 'fadeUp 0.9s var(--ease) 0.22s both',
+          }}>
+            {PERSONAL.tagline}
+          </p>
+
+          {/* CTAs */}
+          <div style={{
+            display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center',
+            animation: 'fadeUp 0.9s var(--ease) 0.36s both',
+          }}>
+            <Magnetic>
+              <a
+                href="#contact"
+                style={{
+                  fontFamily: 'var(--font-mono-stack)', fontSize: 13.5, fontWeight: 600,
+                  padding: '13px 22px', borderRadius: 12,
+                  background: 'var(--accent)', color: 'var(--accent-contrast)',
+                  border: '1px solid var(--accent)',
+                  display: 'inline-flex', alignItems: 'center', gap: 8,
+                  transition: 'opacity 0.2s',
+                }}
+              >
+                Let's talk →
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a
+                href={PERSONAL.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  fontFamily: 'var(--font-mono-stack)', fontSize: 13.5,
+                  padding: '13px 22px', borderRadius: 12,
+                  border: '1px solid var(--line-2)',
+                  color: 'var(--text)',
+                  display: 'inline-flex', alignItems: 'center', gap: 8,
+                  transition: 'background 0.25s, border-color 0.25s, color 0.25s',
+                }}
+                className="btn-ghost"
+              >
+                Resume ↗
+              </a>
+            </Magnetic>
+          </div>
         </div>
 
-        {/* 4-column meta row */}
+        {/* Right column — meta */}
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: '24px 32px',
-          borderTop: '1px solid var(--line)',
-          paddingTop: 28,
-          animation: 'fadeUp 0.9s var(--ease) 0.5s both',
-        }} className="meta-row-grid">
+          display: 'flex', flexDirection: 'column', gap: 32,
+          borderLeft: '1px solid var(--line)',
+          paddingLeft: 'clamp(28px, 4vw, 52px)',
+          animation: 'fadeUp 0.9s var(--ease) 0.44s both',
+        }} className="hero-meta">
           {META.map((item) => (
             <div key={item.label}>
               <p style={{
-                fontFamily: 'var(--font-mono-stack)', fontSize: 11.5,
+                fontFamily: 'var(--font-mono-stack)', fontSize: 11,
                 letterSpacing: '0.1em', textTransform: 'uppercase',
-                color: 'var(--text-3)', marginBottom: 4,
+                color: 'var(--text-3)', marginBottom: 6,
               }}>
                 {item.label}
               </p>
-              <p style={{ fontSize: 15, color: 'var(--text)' }}>{item.value}</p>
+              <p style={{ fontSize: 14.5, color: 'var(--text)', lineHeight: 1.4, whiteSpace: 'nowrap' }}>
+                {item.value}
+              </p>
             </div>
           ))}
         </div>
+
       </div>
 
       <style>{`
-        .btn-ghost:hover {
-          background: var(--text);
-          color: var(--bg);
-          border-color: var(--text);
+        @media (max-width: 860px) {
+          .hero-inner {
+            grid-template-columns: 1fr !important;
+          }
+          .hero-meta {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 24px 32px !important;
+            border-left: none !important;
+            border-top: 1px solid var(--line) !important;
+            padding-left: 0 !important;
+            padding-top: 28px !important;
+          }
+          .hero-meta p:last-child {
+            white-space: normal !important;
+          }
         }
-        @media (max-width: 640px) {
-          .meta-row-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        @media (max-width: 400px) {
+          .hero-meta {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
         }
       `}</style>
     </section>
