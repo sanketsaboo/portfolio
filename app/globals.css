@@ -202,6 +202,10 @@ svg {
   border-radius: 3px;
 }
 
+
+
+
+
 /* ─── Film grain overlay ─────────────────────────────────────── */
 body::after {
   content: "";
@@ -237,6 +241,20 @@ body::after {
   );
   opacity: 0.6;
   pointer-events: none;
+}
+
+/* ─── Scroll indicator ───────────────────────────────────────── */
+@keyframes scrollDrop {
+  0%   { transform: scaleY(0); opacity: 0; transform-origin: top; }
+  40%  { transform: scaleY(1); opacity: 1; transform-origin: top; }
+  80%  { transform: scaleY(1); opacity: 0; transform-origin: bottom; }
+  100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; }
+}
+.scroll-line {
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(to bottom, var(--text-2), transparent);
+  animation: scrollDrop 2s var(--ease) infinite;
 }
 
 /* ─── Scroll reveal ──────────────────────────────────────────── */
@@ -502,12 +520,6 @@ body::after {
   color: var(--accent) !important;
   border-color: var(--accent-border) !important;
   background: var(--accent-soft) !important;
-}
-/* Tablet: tighten label column */
-@media (max-width: 720px) {
-  .skill-row {
-    grid-template-columns: 160px 1fr !important;
-  }
 }
 /* Mobile: stack label above pills */
 @media (max-width: 720px) {

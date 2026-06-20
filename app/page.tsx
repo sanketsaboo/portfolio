@@ -1,4 +1,5 @@
 import CustomCursor from '@/components/CustomCursor'
+import DotGrid from '@/components/DotGrid'
 import TweaksPanel from '@/components/TweaksPanel'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <CustomCursor />
+      <DotGrid />
       <TweaksPanel />
       <Navbar />
       <main>

@@ -27,8 +27,6 @@ export default function Hero() {
     <section style={{ position: 'relative', minHeight: '100dvh', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflow: 'hidden' }}>
       <div id="hero-sentinel" style={{ position: 'absolute', top: '80vh', left: 0, width: 1, height: 1 }} aria-hidden="true" />
 
-      {/* Grid texture */}
-      <div className="hero-grid" aria-hidden="true" />
 
       {/* Bottom fade */}
       <div style={{
@@ -36,6 +34,21 @@ export default function Hero() {
         background: 'linear-gradient(to top, var(--bg), transparent)',
         pointerEvents: 'none', zIndex: 1,
       }} aria-hidden="true" />
+
+      {/* Scroll indicator */}
+      <div style={{
+        position: 'absolute', bottom: 36, left: '50%',
+        transform: 'translateX(-50%)',
+        zIndex: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
+        animation: 'fadeUp 1s var(--ease) 0.9s both',
+      }} aria-hidden="true">
+        <span style={{
+          fontFamily: 'var(--font-mono-stack)', fontSize: 9.5,
+          letterSpacing: '0.18em', textTransform: 'uppercase',
+          color: 'var(--text-3)',
+        }}>scroll</span>
+        <div className="scroll-line" />
+      </div>
 
       <div style={{
         position: 'relative', zIndex: 2,
@@ -77,8 +90,13 @@ export default function Hero() {
               <span style={{ color: 'var(--text)' }}>Sanket</span>
             </span>
             <span className="hero-line">
-              <span style={{ color: 'var(--text)' }}>
-                Saboo<span style={{ color: 'var(--accent)' }}>.</span>
+              <span style={{
+                background: 'linear-gradient(110deg, var(--text) 40%, var(--accent) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}>
+                Saboo.
               </span>
             </span>
           </h1>
