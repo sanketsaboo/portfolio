@@ -59,7 +59,9 @@ export default function Navbar() {
           style={{ display: 'flex', alignItems: 'center', gap: 9, fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: 19, letterSpacing: '-0.03em' }}
           aria-label="Sanket Saboo - home"
         >
-          <span className="pulse-dot" style={{ background: 'var(--accent)' }} />
+          <svg width="22" height="22" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M 262,98 C 328,98 328,210 200,210 C 72,210 72,322 138,322" stroke="var(--accent)" strokeWidth="70" strokeLinecap="round"/>
+          </svg>
           <span style={{ color: 'var(--text)' }}>Sanket Saboo</span>
         </a>
 

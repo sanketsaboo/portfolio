@@ -38,7 +38,7 @@ export default function Contact() {
     <section id="contact" style={{ padding: 'clamp(80px, 12vw, 160px) var(--gut)', borderTop: '1px solid var(--line)', maxWidth: 'var(--maxw)', margin: '0 auto', width: '100%' }}>
 
       <div ref={ref} className="reveal reveal-hidden">
-        <span style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 13, color: 'var(--accent)' }}>05 - contact</span>
+        <span style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 13, color: 'var(--accent)' }}>04 - contact</span>
         <h2 style={{
           fontFamily: 'var(--font-heading)',
           fontSize: 'clamp(44px, 8.5vw, 96px)',

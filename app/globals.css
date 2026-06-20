@@ -562,6 +562,14 @@ body::after {
 .to-top:hover {
   color: var(--accent) !important;
 }
+@media (max-width: 480px) {
+  .footer-inner {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+}
 
 /* ─── Reduced motion ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {

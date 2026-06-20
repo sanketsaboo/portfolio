@@ -28,6 +28,8 @@ export default function CustomCursor() {
       ring.classList.toggle('is-hovering', isInteractive)
     }
 
+    const onLeave = () => ring.classList.remove('is-hovering')
+
     const tick = () => {
       rx += (mx - rx) * 0.18
       ry += (my - ry) * 0.18
@@ -36,10 +38,12 @@ export default function CustomCursor() {
     }
 
     window.addEventListener('mousemove', onMove, { passive: true })
+    document.addEventListener('mouseleave', onLeave)
     raf = requestAnimationFrame(tick)
 
     return () => {
       window.removeEventListener('mousemove', onMove)
+      document.removeEventListener('mouseleave', onLeave)
       cancelAnimationFrame(raf)
     }
   }, [])
