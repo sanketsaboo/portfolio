@@ -34,7 +34,7 @@ export default function About() {
           display: 'grid', placeItems: 'center', overflow: 'hidden',
         }}>
           <span style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 12, color: 'var(--text-3)', letterSpacing: '0.05em' }}>
-            [ portrait — drop a photo ]
+            [ portrait - drop a photo ]
           </span>
         </div>
 
@@ -57,24 +57,6 @@ export default function About() {
             </p>
           ))}
 
-          {/* Stats */}
-          <div
-            ref={ref}
-            className="reveal reveal-hidden about-facts"
-            data-d="3"
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 18, marginTop: 40 }}
-          >
-            {PERSONAL.stats.map((stat) => (
-              <div key={stat.label}>
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 4vw, 44px)', color: 'var(--text)', letterSpacing: '-0.03em', lineHeight: 1 }}>
-                  {stat.value}
-                </div>
-                <div style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 12, color: 'var(--text-3)', marginTop: 4 }}>
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 

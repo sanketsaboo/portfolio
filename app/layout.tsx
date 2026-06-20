@@ -6,7 +6,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Sanket Saboo — Senior Software Engineer',
+    default: 'Sanket Saboo - Senior Software Engineer',
     template: '%s | Sanket Saboo',
   },
   description:
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://sanketsaboo.com',
-    title: 'Sanket Saboo — Senior Software Engineer',
+    title: 'Sanket Saboo - Senior Software Engineer',
     description:
       'Senior SWE at BrowserStack. 8+ years building distributed systems and backend infrastructure at scale.',
     siteName: 'Sanket Saboo',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sanket Saboo — Senior Software Engineer',
+    title: 'Sanket Saboo - Senior Software Engineer',
     description: 'Senior SWE at BrowserStack. Node.js, Python, Elixir, TypeScript, GCP.',
     creator: '@sanketsaboo',
     images: ['/og-image.png'],

@@ -58,7 +58,7 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* Name — text-clip-rise animation */}
+        {/* Name - text-clip-rise animation */}
         <h1 style={{
           fontFamily: 'var(--font-heading)',
           fontSize: 'clamp(52px, 11.5vw, 136px)',

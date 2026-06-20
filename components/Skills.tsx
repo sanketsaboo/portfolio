@@ -32,7 +32,7 @@ export default function Skills() {
         style={{
           borderRadius: 14,
           overflow: 'hidden',
-          /* Accent left + neutral other sides — applied on container so border-radius clips cleanly */
+          /* Accent left + neutral other sides - applied on container so border-radius clips cleanly */
           border: '1px solid var(--line-2)',
           borderLeft: '3px solid var(--accent)',
         }}
@@ -47,7 +47,7 @@ export default function Skills() {
               borderTop: i === 0 ? 'none' : '1px solid var(--line)',
             }}
           >
-            {/* Label cell — no own left border; container handles it */}
+            {/* Label cell - no own left border; container handles it */}
             <div
               className="skill-label-cell"
               style={{
@@ -79,7 +79,7 @@ export default function Skills() {
               </span>
             </div>
 
-            {/* Pills cell — inner shadow on right to visually close the row */}
+            {/* Pills cell - inner shadow on right to visually close the row */}
             <div
               className="skill-pills-cell"
               style={{

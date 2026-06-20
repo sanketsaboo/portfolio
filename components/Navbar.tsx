@@ -57,7 +57,7 @@ export default function Navbar() {
         <a
           href="#"
           style={{ display: 'flex', alignItems: 'center', gap: 9, fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: 19, letterSpacing: '-0.03em' }}
-          aria-label="Sanket Saboo — home"
+          aria-label="Sanket Saboo - home"
         >
           <span className="pulse-dot" style={{ background: 'var(--accent)' }} />
           <span style={{ color: 'var(--text)' }}>Sanket Saboo</span>

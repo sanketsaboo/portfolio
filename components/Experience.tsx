@@ -3,6 +3,83 @@
 import { useEffect, useRef, useState } from 'react'
 import { EXPERIENCE } from '@/lib/config'
 
+type Product = { name: string; description: string; href: string }
+
+function ProductTag({ product }: { product: Product }) {
+  const [open, setOpen] = useState(false)
+  const timer = useRef<ReturnType<typeof setTimeout>>()
+
+  const show = () => { clearTimeout(timer.current); setOpen(true) }
+  const hide = () => { timer.current = setTimeout(() => setOpen(false), 120) }
+
+  return (
+    <div
+      style={{ position: 'relative', display: 'inline-block' }}
+      onMouseEnter={show}
+      onMouseLeave={hide}
+    >
+      <span
+        className="xp-product-chip"
+        style={{
+          fontFamily: 'var(--font-mono-stack)', fontSize: 11.5,
+          color: open ? 'var(--accent)' : 'var(--text-2)',
+          border: `1px solid ${open ? 'var(--accent-border)' : 'var(--line)'}`,
+          borderRadius: 100,
+          padding: '4px 11px',
+          cursor: 'default',
+          display: 'inline-flex', alignItems: 'center', gap: 5,
+          transition: 'color 0.2s, border-color 0.2s, background 0.2s',
+          background: open ? 'var(--accent-soft)' : 'transparent',
+          userSelect: 'none',
+        }}
+      >
+        {product.name}
+        <span style={{ fontSize: 9, opacity: 0.6 }}>↗</span>
+      </span>
+
+      {open && (
+        <div
+          onMouseEnter={show}
+          onMouseLeave={hide}
+          style={{
+            position: 'absolute',
+            bottom: 'calc(100% + 8px)',
+            left: 0,
+            zIndex: 50,
+            minWidth: 240,
+            maxWidth: 300,
+            background: 'var(--surface)',
+            border: '1px solid var(--line-2)',
+            borderRadius: 12,
+            padding: '14px 16px',
+            boxShadow: '0 12px 40px oklch(0 0 0 / 0.18)',
+          }}
+        >
+          <div style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 11.5, fontWeight: 600, color: 'var(--text)', marginBottom: 6 }}>
+            {product.name}
+          </div>
+          <div style={{ fontSize: 13, color: 'var(--text-2)', lineHeight: 1.6, marginBottom: 12 }}>
+            {product.description}
+          </div>
+          <a
+            href={product.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: 'var(--font-mono-stack)', fontSize: 11.5,
+              color: 'var(--accent)',
+              display: 'inline-flex', alignItems: 'center', gap: 5,
+              textDecoration: 'none',
+            }}
+          >
+            View product ↗
+          </a>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function CompanyLogo({ company, logoDomain, logoSrc, logoColor }: {
   company: string
   logoDomain?: string
@@ -112,12 +189,13 @@ export default function Experience() {
             <div>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 16 }}>
                 {exp.highlights.map((point, pi) => (
-                  <li key={pi} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, fontSize: 15, color: 'var(--text-2)', lineHeight: 1.65 }}>
+                  <li key={pi} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, fontSize: 15, color: 'color-mix(in oklab, var(--text) 55%, var(--text-2))', lineHeight: 1.65 }}>
                     <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--text-3)', flexShrink: 0, marginTop: 8 }} aria-hidden="true" />
                     {point}
                   </li>
                 ))}
               </ul>
+
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {exp.tech.map((tag) => (
                   <span
@@ -135,6 +213,18 @@ export default function Experience() {
                   </span>
                 ))}
               </div>
+
+              {/* Product chips - hover to reveal description + link */}
+              {(exp as any).products && (
+                <div style={{ marginTop: 20, display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
+                  <span style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 11, color: 'var(--text-3)', letterSpacing: '0.08em', marginRight: 2 }}>
+                    shipped ·
+                  </span>
+                  {(exp as any).products.map((p: Product) => (
+                    <ProductTag key={p.name} product={p} />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         ))}

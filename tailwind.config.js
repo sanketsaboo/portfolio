@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // No darkMode class — we use data-theme attribute via CSS variables directly
+  // No darkMode class - we use data-theme attribute via CSS variables directly
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
