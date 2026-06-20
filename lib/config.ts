@@ -62,7 +62,7 @@ export const EXPERIENCE = [
     ],
     tech: ['Node.js', 'Python', 'Elixir', 'React', 'PostgreSQL', 'Redis', 'RabbitMQ', 'Generative AI', 'LLM', 'Docker', 'Kubernetes', 'Argo', 'Kustomize', 'GitLab', 'GCP'],
     products: [
-      { name: 'SiteScan', description: 'Automated merchant due diligence and RBI compliance platform for financial onboarding, with AI-powered MCC prediction.', href: 'https://www.privybyidfy.com' },
+      { name: 'SiteScan', description: 'Automated merchant due diligence and RBI compliance platform for financial onboarding, with AI-powered MCC prediction.', href: 'https://www.idfy.com/industries/payments/acquirers/' },
       { name: 'Inspect AI', description: 'AI privacy co-pilot - scans apps for dark patterns, PII leaks, and consent misalignment.', href: 'https://www.privybyidfy.com/products/inspect' },
       { name: 'Cookie Management', description: 'Enterprise cookie consent platform - auto-scans, categorises, and manages cookie banners for GDPR and DPDP Act compliance.', href: 'https://www.privybyidfy.com/products/cookie-manager' },
       { name: 'Consent Governance', description: 'End-to-end consent lifecycle management - granular consent collection, withdrawal, and immutable audit trails for regulatory review. Adopted by Axis Bank, Federal Bank, and Airtel.', href: 'https://www.privybyidfy.com/products/consent-governance' },
@@ -108,7 +108,7 @@ export const PRODUCTS = [
   {
     name: 'SiteScan',
     company: 'IDfy · Privy',
-    href: 'https://www.privybyidfy.com',
+    href: 'https://www.idfy.com/industries/payments/acquirers/',
     description: 'Automated merchant due diligence and RBI compliance platform for financial onboarding.',
     highlights: [
       '4.9M+ website scans with P90 scan time of 48s',

@@ -53,7 +53,6 @@ export default function Skills() {
               style={{
                 padding: '26px 24px',
                 borderRight: '1px solid var(--line)',
-                background: 'var(--surface)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-start',

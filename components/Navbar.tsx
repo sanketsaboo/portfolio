@@ -106,28 +106,6 @@ export default function Navbar() {
             ) : <span style={{ width: 16, height: 16 }} />}
           </button>
 
-          {/* Get in touch CTA */}
-          <Magnetic className="hidden md:inline-block">
-            <a
-              href="#contact"
-              style={{
-                fontFamily: 'var(--font-mono-stack)',
-                fontSize: 13,
-                fontWeight: 600,
-                padding: '9px 16px',
-                borderRadius: 10,
-                border: '1px solid var(--accent-border)',
-                background: 'var(--accent-soft)',
-                color: 'var(--accent)',
-                display: 'inline-flex',
-                alignItems: 'center',
-                transition: 'opacity 0.2s',
-              }}
-            >
-              Get in touch
-            </a>
-          </Magnetic>
-
           {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
@@ -172,7 +150,7 @@ export default function Navbar() {
           }}
           role="dialog" aria-modal="true"
         >
-          <nav style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, width: '100%', padding: '0 32px' }}>
+          <nav style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0, width: '100%', padding: '0 32px' }}>
             {NAV_LINKS.map((link) => (
               <a
                 key={link.label}
@@ -180,11 +158,11 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: 'clamp(2rem, 8vw, 2.8rem)',
+                  fontSize: 'clamp(1.6rem, 7vw, 2.2rem)',
                   fontWeight: 700,
                   color: 'var(--text-3)',
                   letterSpacing: '-0.03em',
-                  padding: '8px 0',
+                  padding: '4px 0',
                   transition: 'color 0.2s',
                   width: '100%', textAlign: 'center',
                 }}
@@ -192,21 +170,6 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              style={{
-                marginTop: 32,
-                fontFamily: 'var(--font-mono-stack)',
-                fontSize: 13, fontWeight: 600,
-                padding: '12px 32px', borderRadius: 12,
-                border: '1px solid var(--accent-border)',
-                background: 'var(--accent-soft)',
-                color: 'var(--accent)',
-              }}
-            >
-              Get in touch
-            </a>
           </nav>
         </div>
       )}

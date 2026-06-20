@@ -190,13 +190,13 @@ export default function Experience() {
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 16 }}>
                 {exp.highlights.map((point, pi) => (
                   <li key={pi} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, fontSize: 15, color: 'color-mix(in oklab, var(--text) 55%, var(--text-2))', lineHeight: 1.65 }}>
-                    <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--text-3)', flexShrink: 0, marginTop: 8 }} aria-hidden="true" />
+                    <span className="xp-bullet-dot" style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--text-3)', flexShrink: 0, marginTop: 8 }} aria-hidden="true" />
                     {point}
                   </li>
                 ))}
               </ul>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, paddingLeft: 16 }}>
                 {exp.tech.map((tag) => (
                   <span
                     key={tag}
@@ -214,15 +214,17 @@ export default function Experience() {
                 ))}
               </div>
 
-              {/* Product chips - hover to reveal description + link */}
+              {/* Product chips */}
               {(exp as any).products && (
-                <div style={{ marginTop: 20, display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
-                  <span style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 11, color: 'var(--text-3)', letterSpacing: '0.08em', marginRight: 2 }}>
-                    shipped ·
+                <div style={{ marginTop: 20, paddingLeft: 16 }}>
+                  <span style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 11, color: 'var(--text-3)', letterSpacing: '0.08em', display: 'block', marginBottom: 10 }}>
+                    Shipped ·
                   </span>
-                  {(exp as any).products.map((p: Product) => (
-                    <ProductTag key={p.name} product={p} />
-                  ))}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                    {(exp as any).products.map((p: Product) => (
+                      <ProductTag key={p.name} product={p} />
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

@@ -299,12 +299,20 @@ body::after {
 }
 
 /* ─── Custom cursor (fine pointer / desktop only) ────────────── */
+.cursor-dot,
+.cursor-ring {
+  display: none;
+}
 @media (hover: hover) and (pointer: fine) {
   body,
   a,
   button,
   [role="button"] {
     cursor: none;
+  }
+  .cursor-dot,
+  .cursor-ring {
+    display: block;
   }
 }
 
@@ -474,6 +482,9 @@ body::after {
 }
 
 /* ─── Skills ─────────────────────────────────────────────────── */
+.skill-label-cell {
+  background: var(--surface);
+}
 /* Row hover: lift all pills together */
 .skill-row:hover .skill-label-cell {
   border-left-color: var(--accent) !important;
@@ -492,22 +503,33 @@ body::after {
   border-color: var(--accent-border) !important;
   background: var(--accent-soft) !important;
 }
-/* Mobile: stack label above pills, merge into single column */
-@media (max-width: 640px) {
+/* Tablet: tighten label column */
+@media (max-width: 720px) {
+  .skill-row {
+    grid-template-columns: 160px 1fr !important;
+  }
+}
+/* Mobile: stack label above pills */
+@media (max-width: 720px) {
   .skill-row {
     grid-template-columns: 1fr !important;
   }
   .skill-label-cell {
+    background: var(--bg);
     border-right: none !important;
-    border-left-width: 3px !important;
     border-bottom: 1px solid var(--line) !important;
-    padding: 16px 20px !important;
+    padding: 14px 18px !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: space-between !important;
   }
   .skill-pills-cell {
-    padding: 16px 20px !important;
+    padding: 14px 18px !important;
+    gap: 6px !important;
+  }
+  .skill-pill {
+    font-size: 12px !important;
+    padding: 5px 11px !important;
   }
 }
 
@@ -515,7 +537,16 @@ body::after {
 @media (max-width: 860px) {
   .xp-row {
     grid-template-columns: 1fr !important;
-    gap: 14px !important;
+    gap: 20px !important;
+  }
+}
+@media (max-width: 560px) {
+  .xp-tag {
+    font-size: 11px !important;
+    padding: 3px 9px !important;
+  }
+  .xp-bullet-dot {
+    margin-top: 6px !important;
   }
 }
 .xp-row:hover .xp-tag {
