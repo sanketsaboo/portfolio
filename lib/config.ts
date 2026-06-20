@@ -8,7 +8,7 @@ export const PERSONAL = {
   careerStart: '2022-04-01', // experience auto-calculates from this date
   focus: 'Distributed Systems · Web · Agentic AI',
   tagline: 'Turning ideas into products that scale and ship. I build for real users, real constraints, and lasting impact.',
-  email: 'sanketsaboo@gmail.com',
+  email: 'sanket.saboo@somaiya.edu',
   availability: 'Open to good opportunities',
   resumeUrl: '/resume.pdf',
   bio: [

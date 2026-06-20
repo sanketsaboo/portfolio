@@ -5,7 +5,7 @@ import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Experience from '@/components/Experience'
 import Skills from '@/components/Skills'
-import Writing from '@/components/Writing'
+// import Writing from '@/components/Writing'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 
@@ -20,7 +20,7 @@ export default function Home() {
         <About />
         <Experience />
         <Skills />
-        <Writing />
+        {/* <Writing /> */}
         <Contact />
       </main>
       <Footer />

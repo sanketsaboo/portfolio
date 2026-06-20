@@ -69,7 +69,7 @@ const jsonLd = {
     'Distributed Systems', 'Node.js', 'Python', 'TypeScript', 'Elixir',
     'GCP', 'AWS', 'PostgreSQL', 'Redis', 'Kubernetes', 'System Design', 'API Design',
   ],
-  email: 'mailto:sanketsaboo@gmail.com',
+  email: 'mailto:sanket.saboo@somaiya.edu',
   sameAs: [
     'https://github.com/sanketsaboo',
     'https://linkedin.com/in/sanketsaboo',
