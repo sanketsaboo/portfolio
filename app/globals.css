@@ -1,0 +1,546 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Sanket Saboo - Portfolio
+   Themes: data-theme="dark|light"
+   Accent: data-accent="cyan|lime|violet|orange|coral"
+   Font:   data-font="modern|editorial|mono"
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap");
+
+/* ---------- Base variables ---------- */
+:root {
+  --maxw: 1180px;
+  --gut: clamp(20px, 5vw, 64px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --radius: 14px;
+
+  /* Heading font (overridden by data-font) */
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-mono-stack: "JetBrains Mono", "Geist Mono", ui-monospace, monospace;
+
+  /* Default accent - cyan */
+  --accent: oklch(0.8 0.14 195);
+  --accent-soft: oklch(0.8 0.14 195 / 0.14);
+  --accent-border: oklch(0.8 0.14 195 / 0.35);
+  --accent-contrast: oklch(0.18 0.02 240);
+}
+
+/* ─── Accent palettes ────────────────────────────────────────── */
+:root,
+[data-accent="cyan"] {
+  --accent: oklch(0.8 0.14 195);
+  --accent-soft: oklch(0.8 0.14 195 / 0.14);
+  --accent-border: oklch(0.8 0.14 195 / 0.35);
+  --accent-contrast: oklch(0.18 0.02 240);
+}
+[data-accent="lime"] {
+  --accent: oklch(0.84 0.16 128);
+  --accent-soft: oklch(0.84 0.16 128 / 0.14);
+  --accent-border: oklch(0.84 0.16 128 / 0.35);
+  --accent-contrast: oklch(0.2 0.03 140);
+}
+[data-accent="violet"] {
+  --accent: oklch(0.74 0.15 292);
+  --accent-soft: oklch(0.74 0.15 292 / 0.16);
+  --accent-border: oklch(0.74 0.15 292 / 0.35);
+  --accent-contrast: oklch(0.98 0 0);
+}
+[data-accent="orange"] {
+  --accent: oklch(0.77 0.15 58);
+  --accent-soft: oklch(0.77 0.15 58 / 0.15);
+  --accent-border: oklch(0.77 0.15 58 / 0.35);
+  --accent-contrast: oklch(0.2 0.03 60);
+}
+[data-accent="coral"] {
+  --accent: oklch(0.72 0.16 24);
+  --accent-soft: oklch(0.72 0.16 24 / 0.16);
+  --accent-border: oklch(0.72 0.16 24 / 0.35);
+  --accent-contrast: oklch(0.98 0 0);
+}
+
+/* ─── Theme tokens ───────────────────────────────────────────── */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: oklch(0.12 0.01 250);
+  --bg-2: oklch(0.16 0.012 250);
+  --surface: oklch(0.19 0.013 250);
+  --line: oklch(1 0 0 / 0.09);
+  --line-2: oklch(1 0 0 / 0.16);
+  --text: oklch(0.97 0.005 250);
+  --text-2: oklch(0.76 0.01 250);
+  --text-3: oklch(0.55 0.012 250);
+  --shadow: 0 30px 60px -25px oklch(0 0 0 / 0.7);
+  --scrollbar-bg: oklch(0.12 0.01 250);
+  --scrollbar-thumb: oklch(0.22 0.012 250);
+  --grid-line: oklch(1 0 0 / 0.04);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: oklch(0.985 0.003 250);
+  --bg-2: oklch(0.965 0.004 250);
+  --surface: oklch(1 0 0);
+  --line: oklch(0.2 0.02 250 / 0.1);
+  --line-2: oklch(0.2 0.02 250 / 0.18);
+  --text: oklch(0.22 0.015 250);
+  --text-2: oklch(0.38 0.015 250);
+  --text-3: oklch(0.48 0.012 250);
+  --shadow: 0 30px 60px -28px oklch(0.3 0.04 250 / 0.22);
+  --scrollbar-bg: oklch(0.985 0.003 250);
+  --scrollbar-thumb: oklch(0.8 0.005 250);
+  --grid-line: oklch(0 0 0 / 0.04);
+}
+
+/* Darken accent in light mode for readable contrast on white */
+:root[data-theme="light"],
+:root[data-theme="light"][data-accent="cyan"] {
+  --accent:        oklch(0.50 0.16 195);
+  --accent-soft:   oklch(0.50 0.16 195 / 0.10);
+  --accent-border: oklch(0.50 0.16 195 / 0.30);
+}
+:root[data-theme="light"][data-accent="lime"] {
+  --accent:        oklch(0.52 0.18 128);
+  --accent-soft:   oklch(0.52 0.18 128 / 0.10);
+  --accent-border: oklch(0.52 0.18 128 / 0.30);
+}
+:root[data-theme="light"][data-accent="violet"] {
+  --accent:        oklch(0.50 0.18 292);
+  --accent-soft:   oklch(0.50 0.18 292 / 0.10);
+  --accent-border: oklch(0.50 0.18 292 / 0.30);
+}
+:root[data-theme="light"][data-accent="orange"] {
+  --accent:        oklch(0.55 0.17 58);
+  --accent-soft:   oklch(0.55 0.17 58 / 0.10);
+  --accent-border: oklch(0.55 0.17 58 / 0.30);
+}
+:root[data-theme="light"][data-accent="coral"] {
+  --accent:        oklch(0.52 0.18 24);
+  --accent-soft:   oklch(0.52 0.18 24 / 0.10);
+  --accent-border: oklch(0.52 0.18 24 / 0.30);
+}
+
+/* ─── Heading font themes ────────────────────────────────────── */
+:root,
+[data-font="modern"] {
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+}
+[data-font="editorial"] {
+  --font-heading: "Instrument Serif", Georgia, serif;
+}
+[data-font="mono"] {
+  --font-heading: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ─── Reset ──────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Space Grotesk", var(--font-geist-sans, system-ui), sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  transition:
+    background 0.5s var(--ease),
+    color 0.5s var(--ease);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+:focus-visible {
+  outline: 2px solid var(--accent-border);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+/* ─── Film grain overlay ─────────────────────────────────────── */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+:root[data-theme="light"] body::after {
+  opacity: 0.01;
+}
+
+/* ─── Hero grid texture ──────────────────────────────────────── */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 60% at 30% 0%,
+    #000 0%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(
+    ellipse 80% 60% at 30% 0%,
+    #000 0%,
+    transparent 75%
+  );
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ─── Scroll reveal ──────────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes heroRise {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.reveal {
+  transition:
+    opacity 0.9s var(--ease),
+    transform 0.9s var(--ease);
+}
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(26px);
+}
+.reveal-hidden.in {
+  opacity: 1;
+  transform: none;
+}
+.reveal-hidden[data-d="1"] {
+  transition-delay: 0.08s;
+}
+.reveal-hidden[data-d="2"] {
+  transition-delay: 0.16s;
+}
+.reveal-hidden[data-d="3"] {
+  transition-delay: 0.24s;
+}
+.reveal-hidden[data-d="4"] {
+  transition-delay: 0.32s;
+}
+
+/* ─── Hero h1 text-clip-rise animation ──────────────────────── */
+.hero-line {
+  display: block;
+  overflow: hidden;
+}
+.hero-line > span {
+  display: block;
+  animation: heroRise 1s var(--ease) both;
+}
+.hero-line:nth-child(2) > span {
+  animation-delay: 0.09s;
+}
+
+/* ─── Custom cursor (fine pointer / desktop only) ────────────── */
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button,
+  [role="button"] {
+    cursor: none;
+  }
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: difference;
+  will-change: transform;
+  transition:
+    width 0.28s var(--ease),
+    height 0.28s var(--ease),
+    background 0.28s var(--ease),
+    opacity 0.28s;
+}
+.cursor-ring.is-hovering {
+  width: 56px;
+  height: 56px;
+  background: #fff;
+}
+
+/* ─── Pulse dot (availability pill) ─────────────────────────── */
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+.pulse-dot {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: oklch(0.78 0.17 150);
+  flex-shrink: 0;
+}
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: oklch(0.78 0.17 150 / 0.45);
+  animation: pulseRing 2s infinite;
+}
+
+/* ─── Navbar nav-link underline hover ────────────────────────── */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 5px;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+.nav-link:hover {
+  color: var(--text) !important;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ─── Writing rows ───────────────────────────────────────────── */
+.post-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg-2);
+  opacity: 0;
+  transition: opacity 0.35s;
+  z-index: -1;
+  border-radius: 8px;
+}
+.post-row:hover {
+  padding-inline: 22px !important;
+}
+.post-row:hover::before {
+  opacity: 1;
+}
+.post-row:hover .post-title {
+  color: var(--accent) !important;
+}
+.post-row:hover .post-arrow {
+  opacity: 1 !important;
+  transform: none !important;
+}
+@media (max-width: 640px) {
+  .post-row {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+  .post-arrow {
+    display: none !important;
+  }
+}
+
+/* ─── Contact ────────────────────────────────────────────────── */
+.email-btn:hover {
+  border-color: var(--accent) !important;
+  background: var(--accent-soft) !important;
+}
+.social-link:hover {
+  color: var(--text) !important;
+  border-color: var(--line-2) !important;
+}
+
+/* ─── About layout ───────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 520px) {
+  .about-facts {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ─── Products ───────────────────────────────────────────────── */
+.product-card:hover {
+  background: var(--bg-2) !important;
+}
+.product-card:hover .product-arrow {
+  color: var(--accent) !important;
+  transform: translate(2px, -2px);
+}
+@media (max-width: 720px) {
+  .products-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─── Skills ─────────────────────────────────────────────────── */
+/* Row hover: lift all pills together */
+.skill-row:hover .skill-label-cell {
+  border-left-color: var(--accent) !important;
+  background: var(--bg-2) !important;
+}
+.skill-row:hover .skill-pills-cell {
+  background: color-mix(in oklab, var(--bg) 90%, var(--accent)) !important;
+}
+.skill-row:hover .skill-pill {
+  border-color: var(--line-2) !important;
+  color: var(--text) !important;
+}
+/* Individual pill hover */
+.skill-pill:hover {
+  color: var(--accent) !important;
+  border-color: var(--accent-border) !important;
+  background: var(--accent-soft) !important;
+}
+/* Mobile: stack label above pills, merge into single column */
+@media (max-width: 640px) {
+  .skill-row {
+    grid-template-columns: 1fr !important;
+  }
+  .skill-label-cell {
+    border-right: none !important;
+    border-left-width: 3px !important;
+    border-bottom: 1px solid var(--line) !important;
+    padding: 16px 20px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .skill-pills-cell {
+    padding: 16px 20px !important;
+  }
+}
+
+/* ─── Experience ─────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .xp-row {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
+.xp-row:hover .xp-tag {
+  border-color: var(--line-2) !important;
+}
+.xp-tag:hover {
+  color: var(--accent) !important;
+  border-color: var(--accent-border) !important;
+  background: var(--accent-soft) !important;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────── */
+.to-top:hover {
+  color: var(--accent) !important;
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal-hidden {
+    opacity: 1;
+    transform: none;
+  }
+  .hero-line > span {
+    animation: none;
+  }
+}
