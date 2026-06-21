@@ -30,12 +30,13 @@ export default function About() {
         <div ref={ref} className="reveal reveal-hidden" style={{
           aspectRatio: '4 / 5', maxWidth: 320,
           borderRadius: 14, border: '1px solid var(--line)',
-          background: `repeating-linear-gradient(135deg, var(--bg-2) 0 11px, var(--surface) 11px 22px)`,
-          display: 'grid', placeItems: 'center', overflow: 'hidden',
+          overflow: 'hidden',
         }}>
-          <span style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 12, color: 'var(--text-3)', letterSpacing: '0.05em' }}>
-            [ portrait]
-          </span>
+          <img
+            src="/portrait.jpeg"
+            alt="Sanket Saboo"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+          />
         </div>
 
         {/* Bio */}

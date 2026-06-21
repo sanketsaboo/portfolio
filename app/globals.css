@@ -257,6 +257,10 @@ body::after {
   animation: scrollDrop 2s var(--ease) infinite;
 }
 
+@media (max-width: 860px) {
+  .scroll-indicator { display: none !important; }
+}
+
 /* ─── Scroll reveal ──────────────────────────────────────────── */
 @keyframes fadeUp {
   from {

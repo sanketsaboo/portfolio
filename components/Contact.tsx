@@ -49,7 +49,7 @@ export default function Contact() {
           marginTop: 18,
         }}>
           Let's build<br />something{' '}
-          <span style={{ color: 'var(--accent)', fontStyle: 'italic' }}>solid</span>.
+          <span style={{ color: 'var(--accent)', fontStyle: 'italic' }}>real</span>.
         </h2>
       </div>
 

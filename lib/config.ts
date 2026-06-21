@@ -7,12 +7,12 @@ export const PERSONAL = {
   location: 'Mumbai, India',
   careerStart: '2022-04-01', // experience auto-calculates from this date
   focus: 'Distributed Systems · Web · Agentic AI',
-  tagline: 'I build systems that scale and products that ship.',
+  tagline: 'Turning ideas into products that scale and people love.',
   email: 'sanket.saboo@somaiya.edu',
   availability: 'Open to good opportunities',
   resumeUrl: 'https://drive.google.com/file/d/14fSLxgzr0AJXrV8cpLm1I6MlFCyuAK_6/view?usp=sharing',
   bio: [
-    'Full-stack engineer passionate about building efficient, scalable, and user-friendly solutions to real-world problems. I love the craft - from distributed backend systems to polished product interfaces - and I pick up new technologies fast.',
+    'Engineer passionate about building efficient, scalable, and user-friendly solutions to real-world problems. I like working on things that actually matter — especially when nobody\'s figured out the answer yet.',
     'I thrive in high-paced environments, love taking full ownership of what I build, and genuinely enjoy turning ideas into reality. If you\'re building something interesting, I\'d love to be part of it.',
   ],
 }

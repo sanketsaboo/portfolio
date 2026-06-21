@@ -36,7 +36,7 @@ export default function Hero() {
       }} aria-hidden="true" />
 
       {/* Scroll indicator */}
-      <div style={{
+      <div className="scroll-indicator" style={{
         position: 'absolute', bottom: 36, left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
