@@ -12,7 +12,7 @@ export const PERSONAL = {
   availability: 'Open to good opportunities',
   resumeUrl: 'https://drive.google.com/file/d/14fSLxgzr0AJXrV8cpLm1I6MlFCyuAK_6/view?usp=sharing',
   bio: [
-    'Engineer passionate about building efficient, scalable, and user-friendly solutions to real-world problems. I like working on things that actually matter — especially when nobody\'s figured out the answer yet.',
+    'Engineer passionate about building efficient, scalable, and user-friendly solutions to real-world problems. I like working on things that actually matter - especially when nobody\'s figured out the answer yet.',
     'I thrive in high-paced environments, love taking full ownership of what I build, and genuinely enjoy turning ideas into reality. If you\'re building something interesting, I\'d love to be part of it.',
   ],
 }

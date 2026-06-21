@@ -10,23 +10,26 @@ export const metadata: Metadata = {
     template: '%s | Sanket Saboo',
   },
   description:
-    'Senior Software Engineer at BrowserStack with 8+ years building distributed systems, APIs, and backend infrastructure at scale. Previously at IDfy (1.2M+ websites processed) and Metalytics.',
+    'Senior Software Engineer at BrowserStack building AI observability infrastructure. Previously founding engineer at IDfy on privacy and compliance platforms. Based in Mumbai, India.',
   keywords: [
-    'Senior Software Engineer',
-    'Backend Engineer',
+    'Sanket Saboo',
+    'Software Engineer',
+    'Full Stack Engineer',
     'Distributed Systems',
+    'AI Observability',
     'BrowserStack',
     'Node.js',
     'Python',
     'TypeScript',
-    'Elixir',
+    'Go',
+    'Agentic AI',
+    'LLM',
+    'OpenTelemetry',
     'GCP',
     'AWS',
-    'Bengaluru',
+    'Mumbai',
     'India',
-    'Remote Engineer',
     'System Design',
-    'API Design',
     'Microservices',
   ],
   authors: [{ name: 'Sanket Saboo', url: 'https://sanketsaboo.com' }],
@@ -39,15 +42,16 @@ export const metadata: Metadata = {
     url: 'https://sanketsaboo.com',
     title: 'Sanket Saboo - Senior Software Engineer',
     description:
-      'Senior SWE at BrowserStack. 8+ years building distributed systems and backend infrastructure at scale.',
+      'Senior Software Engineer at BrowserStack building AI observability infrastructure. Turning ideas into products that scale and people love.',
     siteName: 'Sanket Saboo',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Sanket Saboo' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sanket Saboo - Senior Software Engineer',
-    description: 'Senior SWE at BrowserStack. Node.js, Python, Elixir, TypeScript, GCP.',
-    creator: '@sanketsaboo',
+    description:
+      'Senior Software Engineer at BrowserStack building AI observability infrastructure. Turning ideas into products that scale and people love.',
+    creator: '@SanketSaboo',
     images: ['/og-image.png'],
   },
   robots: {
@@ -64,16 +68,16 @@ const jsonLd = {
   url: 'https://sanketsaboo.com',
   jobTitle: 'Senior Software Engineer',
   worksFor: { '@type': 'Organization', name: 'BrowserStack', url: 'https://www.browserstack.com' },
-  address: { '@type': 'PostalAddress', addressLocality: 'Bengaluru', addressCountry: 'IN' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Mumbai', addressCountry: 'IN' },
   knowsAbout: [
-    'Distributed Systems', 'Node.js', 'Python', 'TypeScript', 'Elixir',
-    'GCP', 'AWS', 'PostgreSQL', 'Redis', 'Kubernetes', 'System Design', 'API Design',
+    'Distributed Systems', 'Node.js', 'Python', 'TypeScript', 'Go', 'Elixir',
+    'GCP', 'AWS', 'PostgreSQL', 'Redis', 'Kubernetes', 'OpenTelemetry',
+    'Generative AI', 'LLMs', 'Agentic AI', 'System Design', 'Microservices',
   ],
-  email: 'mailto:sanket.saboo@somaiya.edu',
   sameAs: [
     'https://github.com/sanketsaboo',
     'https://linkedin.com/in/sanketsaboo',
-    'https://x.com/sanketsaboo',
+    'https://x.com/SanketSaboo',
     'https://read.cv/sanketsaboo',
   ],
 }
@@ -86,6 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <head>
+        <link rel="alternate" type="text/plain" title="LLMs.txt" href="/llms.txt" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

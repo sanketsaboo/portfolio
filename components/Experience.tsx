@@ -173,7 +173,7 @@ export default function Experience() {
                 <div>
                   <div style={{ fontFamily: 'var(--font-mono-stack)', fontSize: 13, color: 'var(--accent)', display: 'flex', alignItems: 'center', gap: 7 }}>
                     {exp.current && (
-                      <span className="pulse-dot" style={{ width: 6, height: 6, background: 'oklch(0.78 0.17 150)', flexShrink: 0 }} aria-label="Current role" />
+                      <span className="pulse-dot" style={{ width: 6, height: 6, background: 'oklch(0.78 0.17 150)', flexShrink: 0 }} aria-hidden="true" />
                     )}
                     {exp.company}
                   </div>

@@ -156,7 +156,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right column — meta */}
+        {/* Right column - meta */}
         <div style={{
           display: 'flex', flexDirection: 'column', gap: 32,
           borderLeft: '1px solid var(--line)',

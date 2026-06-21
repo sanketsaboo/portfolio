@@ -74,7 +74,7 @@
   --line-2: oklch(1 0 0 / 0.16);
   --text: oklch(0.97 0.005 250);
   --text-2: oklch(0.76 0.01 250);
-  --text-3: oklch(0.55 0.012 250);
+  --text-3: oklch(0.62 0.012 250);
   --shadow: 0 30px 60px -25px oklch(0 0 0 / 0.7);
   --scrollbar-bg: oklch(0.12 0.01 250);
   --scrollbar-thumb: oklch(0.22 0.012 250);
@@ -97,7 +97,7 @@
   --grid-line: oklch(0 0 0 / 0.04);
 }
 
-/* Accent in light mode — slightly muted for white bg contrast */
+/* Accent in light mode - slightly muted for white bg contrast */
 :root[data-theme="light"],
 :root[data-theme="light"][data-accent="cyan"] {
   --accent:        oklch(0.68 0.16 195);

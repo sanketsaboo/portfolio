@@ -14,7 +14,17 @@ export default function Footer() {
             <path d="M 262,98 C 328,98 328,210 200,210 C 72,210 72,322 138,322" stroke="var(--text-3)" strokeWidth="70" strokeLinecap="round"/>
           </svg>
           <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 12.5, color: 'var(--text-3)' }}>
-            © {year} Sanket Saboo · sanketsaboo.com
+            © {year} Sanket Saboo · sanketsaboo.com ·{' '}
+            <a
+              href="/llms.txt"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--text-3)', transition: 'color 0.2s' }}
+              onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-3)')}
+            >
+              llms.txt
+            </a>
           </span>
         </div>
         <button
