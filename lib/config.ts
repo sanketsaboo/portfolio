@@ -37,7 +37,8 @@ export const EXPERIENCE = [
     highlights: [
       'Developing an AI Tracing and Observability platform enabling end-to-end tracing, monitoring, and debugging for LLM applications.',
       'Building across multiple LLM providers and SDK integrations for enterprise-grade observability.',
-      'Rearchitected and implemented the ingestion pipeline - making it ~2x faster and ~50% cheaper, processing 5.76M+ events per day on average (~4K rpm) and growing.',
+      'Rearchitected and implemented the ingestion pipeline - making it ~2x faster and reducing infrastructure costs by 70% (saving ~$40K at current traffic volumes), processing 5.76M+ events per day on average (~4K rpm) and growing.',
+      'Implemented automatic SDK generation from APIs, along with performance improvements in client-side CPU and memory.',
       'Working on AI Evals - enabling teams to measure and benchmark LLM application quality at scale.',
     ],
     tech: ['Node.js', 'TypeScript', 'Python', 'Go', 'Java', 'Next.js', 'Redis', 'BullMQ', 'OpenTelemetry', 'SDK', 'Generative AI', 'LLM', 'Agentic AI', 'AWS', 'GitHub', 'Git'],
@@ -50,14 +51,14 @@ export const EXPERIENCE = [
     period: 'Jan 2023 – Jan 2026',
     current: false,
     highlights: [
-      'Built and scaled SiteScan end-to-end - automated compliance checks and merchant due diligence for RBI-regulated onboarding, contributing 1.25% of revenue.',
-      'Scaled to 4.9M+ website scans with P90 scan time of 48s and 70k+ domains per bulk job, powered by AI-driven MCC prediction at 72–85% accuracy.',
-      'Architected and built the Cookie Management platform end-to-end - auto-scanning, categorising, and managing cookie banners for GDPR and India\'s DPDP Act compliance.',
+      'Built and scaled SiteScan end-to-end - automated compliance checks and merchant due diligence for RBI-regulated onboarding, reducing onboarding TAT by 50% and manual effort by 90%, contributing 1.25% of revenue (Razorpay, HDFC, and more).',
+      'Scaled to 6.9M+ website scans with P90 scan time of 48s and 70k+ domains per bulk job, powered by AI-driven MCC prediction at 72–85% accuracy.',
+      'Architected and built the Cookie Management platform end-to-end - auto-scanning, categorising, and managing cookie banners for GDPR and India\'s DPDP Act compliance (Axis Bank, Federal Bank).',
       'Founding engineer on the Consent Governance platform - built granular consent collection, withdrawal flows, and immutable audit trails enabling enterprise-grade regulatory compliance.',
       'Reduced daily bandwidth by ~77% through size optimization and caching for 1.5M daily hits, cutting infrastructure costs by over 75% - saving ~$25K/year per client.',
       'Delivered event-driven infrastructure using modular microservices on GCP for secure, scalable data handling.',
       'Built the entire backend and parts of the AI layer for Inspect AI - a privacy compliance co-pilot enabling dark pattern detection, journey intelligence, and real-time consent alignment across web and mobile.',
-      'Built the backend and AI for TPRM\'s Contract Analysis module - automatically detecting missing or non-compliant clauses, running high-risk checks on processors, and maintaining a live contract inventory with risk tags.',
+      'Built the backend and AI for TPRM\'s Contract Analysis module - automatically detecting missing or non-compliant clauses, running high-risk checks on processors, and maintaining a live contract inventory with risk tags, spanning 6+ microservices with Inspect AI.',
       'Privy products adopted by Axis Bank, Federal Bank, and Airtel - Privy recognised as a winner of the MeitY DPDP Innovation Challenge.',
     ],
     tech: ['Node.js', 'Python', 'Elixir', 'React', 'PostgreSQL', 'Redis', 'RabbitMQ', 'Generative AI', 'LLM', 'Docker', 'Kubernetes', 'Argo', 'Kustomize', 'GitLab', 'GCP'],
@@ -168,23 +169,8 @@ export const SKILLS: Record<string, string[]> = {
 
 export const WRITING = [
   {
-    date: 'Nov 2024',
-    title: 'Why idempotent APIs are the most underrated design pattern',
-    href: '#',
-  },
-  {
-    date: 'Aug 2024',
-    title: 'Scaling Postgres to 10M rows without breaking a sweat',
-    href: '#',
-  },
-  {
-    date: 'May 2024',
-    title: 'Boring technology is a feature, not a bug',
-    href: '#',
-  },
-  {
-    date: 'Feb 2024',
-    title: "Code review isn't about the code - it's about the team",
-    href: '#',
+    date: 'Aug 2026',
+    title: 'ClickHouse',
+    href: 'https://learn.sanketsaboo.com/clickhouse',
   },
 ]
