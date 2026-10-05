@@ -10,13 +10,16 @@ export const metadata: Metadata = {
     template: '%s | Sanket Saboo',
   },
   description:
-    'Senior Software Engineer at BrowserStack building AI observability infrastructure. Previously founding engineer at IDfy on privacy and compliance platforms. Based in Mumbai, India.',
+    'Senior Software Engineer at BrowserStack building AI observability infrastructure and RAG & knowledge base systems for LLM applications. Previously founding engineer at IDfy Labs and Privy by IDfy on privacy and compliance platforms. Based in Mumbai, India.',
   keywords: [
     'Sanket Saboo',
     'Software Engineer',
-    'Full Stack Engineer',
+    'Senior Software Engineer',
+    'Backend Engineer',
     'Distributed Systems',
     'AI Observability',
+    'RAG',
+    'Knowledge Base',
     'BrowserStack',
     'Node.js',
     'Python',
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
     url: 'https://sanketsaboo.com',
     title: 'Sanket Saboo - Senior Software Engineer',
     description:
-      'Senior Software Engineer at BrowserStack building AI observability infrastructure. Turning ideas into products that scale and people love.',
+      'Senior Software Engineer at BrowserStack building AI observability infrastructure and RAG & knowledge base systems for LLM applications. Turning ideas into products that scale and people love.',
     siteName: 'Sanket Saboo',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Sanket Saboo' }],
   },
@@ -50,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sanket Saboo - Senior Software Engineer',
     description:
-      'Senior Software Engineer at BrowserStack building AI observability infrastructure. Turning ideas into products that scale and people love.',
+      'Senior Software Engineer at BrowserStack building AI observability infrastructure and RAG & knowledge base systems for LLM applications. Turning ideas into products that scale and people love.',
     creator: '@SanketSaboo',
     images: ['/og-image.png'],
   },
@@ -72,7 +75,7 @@ const jsonLd = {
   knowsAbout: [
     'Distributed Systems', 'Node.js', 'Python', 'TypeScript', 'Go', 'Elixir',
     'GCP', 'AWS', 'PostgreSQL', 'Redis', 'Kubernetes', 'OpenTelemetry',
-    'Generative AI', 'LLMs', 'Agentic AI', 'System Design', 'Microservices',
+    'Generative AI', 'LLMs', 'RAG', 'Agentic AI', 'System Design', 'Microservices',
   ],
   sameAs: [
     'https://github.com/sanketsaboo',

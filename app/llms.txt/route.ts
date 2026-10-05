@@ -1,4 +1,4 @@
-import { PERSONAL, SOCIAL, EXPERIENCE, PRODUCTS, SKILLS } from '@/lib/config'
+import { PERSONAL, SOCIAL, EXPERIENCE, PRODUCTS, SKILLS, WRITING } from '@/lib/config'
 
 const years = Math.floor(
   (Date.now() - new Date(PERSONAL.careerStart).getTime()) / (1000 * 60 * 60 * 24 * 365.25)
@@ -21,6 +21,7 @@ function generateLlmsTxt(): string {
   lines.push(PERSONAL.bio[1])
   lines.push('')
   lines.push(`- Portfolio: https://sanketsaboo.com`)
+  lines.push(`- Email: ${PERSONAL.email}`)
   lines.push(`- Location: ${PERSONAL.location}`)
   lines.push(`- Experience: ${years}+ years`)
   lines.push(`- Resume: ${PERSONAL.resumeUrl}`)
@@ -33,7 +34,7 @@ function generateLlmsTxt(): string {
     lines.push(`### ${job.company} - ${job.role} (${job.period})`)
     lines.push('')
     for (const h of job.highlights) {
-      lines.push(h)
+      lines.push(`- ${h}`)
     }
     lines.push('')
     lines.push(`Tech: ${job.tech.join(', ')}`)
@@ -44,7 +45,15 @@ function generateLlmsTxt(): string {
   lines.push('## Products Built')
   lines.push('')
   for (const p of PRODUCTS) {
-    lines.push(`- **${p.name}** (${p.company}): ${p.description} ${p.highlights.join(' ')} Role: ${p.role}. ${p.href}`)
+    lines.push(`- **${p.name}** (${p.company}): ${p.description} ${p.highlights.join('. ')}. Role: ${p.role}. ${p.href}`)
+  }
+  lines.push('')
+
+  // Writing
+  lines.push('## Writing')
+  lines.push('')
+  for (const post of WRITING) {
+    lines.push(`- [${post.title}](${post.href}) (${post.date})`)
   }
   lines.push('')
 
@@ -62,7 +71,6 @@ function generateLlmsTxt(): string {
   lines.push(`- GitHub: ${SOCIAL.github}`)
   lines.push(`- LinkedIn: ${SOCIAL.linkedin}`)
   lines.push(`- Twitter/X: ${SOCIAL.twitter}`)
-  lines.push(`- Read.cv: ${SOCIAL.readcv}`)
   lines.push('')
 
   return lines.join('\n')
