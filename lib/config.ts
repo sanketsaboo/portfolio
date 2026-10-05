@@ -175,6 +175,11 @@ export const WRITING = [
   {
     date: 'Aug 2026',
     title: 'ClickHouse',
-    href: 'https://learn.sanketsaboo.com/clickhouse',
+    href: 'https://learn.sanketsaboo.com/docs/clickhouse',
+  },
+  {
+    date: 'Oct 2026',
+    title: 'PostgreSQL',
+    href: 'https://learn.sanketsaboo.com/docs/postgres',
   },
 ]
